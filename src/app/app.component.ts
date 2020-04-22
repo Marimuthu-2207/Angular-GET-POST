@@ -1,5 +1,5 @@
-import { Component ,OnInit, Directive, ViewEncapsulation} from '@angular/core';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
+import { Component } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
 import { RestService } from './rest.service';
 import { User } from './model/user.model';
 
@@ -19,13 +19,8 @@ export class AppComponent {
     email = '';
     userName = '';
 
-    constructor(private http : HttpClient, private restService : RestService){
-        console.log(new Date());
-        setTimeout(() => {
-            console.log(new Date());
-        },3000);
-
-    }
+    constructor(private http : HttpClient, 
+        private restService : RestService){    }
 
 
     userData(event : Event){
@@ -62,10 +57,4 @@ export class AppComponent {
         this.user.username = null;
 
     };
-
-    autoFillData(){
-        setTimeout(()=>{
-        },1000);
-        
-    }
 }
