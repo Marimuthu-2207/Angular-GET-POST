@@ -1,0 +1,9 @@
+<div class="contain">
+    <input class="form-control" type="text" placeholder="user Id" (input)="userData($event)" [(ngModel)]=user.userId>
+    <input class="form-control" type="text" placeholder="First Name" [(ngModel)]=user.firstName>
+    <input class="form-control" type="text" placeholder="Last Name" [(ngModel)]=user.lastName>
+    <input class="form-control" type="text" placeholder="Email" [(ngModel)]=user.email>
+    <input class="form-control" type="text" placeholder="User Name" [(ngModel)]=user.username>
+    <button class="form-control" (click)="getData()">Get</button>
+    <button class="form-control" (click)="postData()">Post</button>
+</div>
